@@ -66,13 +66,14 @@ class Album extends Component {
        <td className="numberOrButton">
        <button>
         { (this.state.currentSong.title === song.title) ?
-         <span className={this.state.isPlaying ? "ion-play" : "ion-pause"}></span>
+         <span className={this.state.isPlaying ? "icon ion-md-pause" : "icon ion-md-play" }></span>
          :
          (this.state.isHovered === index+1) ?
-         <span className="ion-play"></span>
+         <span className="icon ion-md-play"></span>
          :
          <span className="song-number">{index+1}</span>
         }
+
       </button>
        </td>
        <td>{song.title},</td>
@@ -97,6 +98,7 @@ class Album extends Component {
           </colgroup>
           <tbody>
             {songs}
+
           </tbody>
         </table>
         </section>
