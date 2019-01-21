@@ -66,10 +66,10 @@ class Album extends Component {
        <td className="numberOrButton">
        <button>
         { (this.state.currentSong.title === song.title) ?
-         <span className={this.state.isPlaying ? "pause-button" : "play-button"}>changing button</span>
+         <span className={this.state.isPlaying ? "ion-play" : "ion-pause"}></span>
          :
          (this.state.isHovered === index+1) ?
-         <span className="play-button">play button</span>
+         <span className="ion-play"></span>
          :
          <span className="song-number">{index+1}</span>
         }
