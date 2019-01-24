@@ -11,7 +11,7 @@ class Album extends Component {
 
     this.state = {
       album: album,
-      currentSong: album.songs[0],
+      currentSong: '',
       isPlaying: false,
       isHovered: false,
     };
@@ -27,7 +27,10 @@ class Album extends Component {
 
     pause() {
       this.audioElement.pause();
-      this.setState({ isPlaying: false });
+      this.setState({
+        isPlaying: false,
+        // currentSong: '',
+      });
     }
 
     setSong(song) {
@@ -44,26 +47,26 @@ class Album extends Component {
         this.play();
       }
     }
-    thisSongIsPlaying(song)  {
-       return this.state.currentSong === song && this.state.isPlaying;
-   }
 
-//     renderNumber(index) {
-//     if (this.state.isHovered.title && index === this.state.isHovered.index) {
-//       return <div>{this.state.isHovered.title} play button</div>
-//     } else {
-//     return index + 1;
-//   }
-// }
-// { (this.state.currentSong.title === song.title) ?
-//  <span className={this.state.isPlaying ? "icon ion-md-pause" : "icon ion-md-play" }></span>
-//  :
-//  (this.state.isHovered === index+1) ?
-//  <span className="icon ion-md-play"></span>
-//  :
-//  <span className="song-number">{index+1}</span>
-// }
+  getIconClassName(song, index) {
+    if ((this.state.isPlaying && this.state.currentSong.title === song.title)) {
+      return  "ion-md-pause"
+    }
 
+    return "ion-md-play"
+  }
+
+  getPlayButton(song, index) {
+    if (this.state.isHovered === index+1) {
+      return <span className={`icon ${this.getIconClassName(song, index)}`}></span>
+    }
+
+    if (this.state.currentSong.title === song.title) {
+      return <span className={`icon ${this.getIconClassName(song, index)}`}></span>
+    }
+
+    return  <span className="song-number">{index+1}</span>;
+  }
 
   render() {
     const songs = this.state.album.songs.map( (song, index) =>
@@ -75,9 +78,8 @@ class Album extends Component {
           >
        <td className="numberOrButton">
        <button>
-       // {  this.state.isHovered === index + 1 ? (<span className="icon ion-md-play" />) :
-       //   (<span className="song-number">{index + 1}</span>)
-       //  (<span className={this.state.isPlaying ? "icon ion-md-pause" : "icon ion-md-play"} />)}
+       { this.getPlayButton(song, index) }
+
       </button>
        </td>
        <td>{song.title},</td>
