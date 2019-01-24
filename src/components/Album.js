@@ -44,6 +44,9 @@ class Album extends Component {
         this.play();
       }
     }
+    thisSongIsPlaying(song)  {
+       return this.state.currentSong === song && this.state.isPlaying;
+   }
 
 //     renderNumber(index) {
 //     if (this.state.isHovered.title && index === this.state.isHovered.index) {
@@ -52,7 +55,14 @@ class Album extends Component {
 //     return index + 1;
 //   }
 // }
-
+// { (this.state.currentSong.title === song.title) ?
+//  <span className={this.state.isPlaying ? "icon ion-md-pause" : "icon ion-md-play" }></span>
+//  :
+//  (this.state.isHovered === index+1) ?
+//  <span className="icon ion-md-play"></span>
+//  :
+//  <span className="song-number">{index+1}</span>
+// }
 
 
   render() {
@@ -65,15 +75,9 @@ class Album extends Component {
           >
        <td className="numberOrButton">
        <button>
-        { (this.state.currentSong.title === song.title) ?
-         <span className={this.state.isPlaying ? "icon ion-md-pause" : "icon ion-md-play" }></span>
-         :
-         (this.state.isHovered === index+1) ?
-         <span className="icon ion-md-play"></span>
-         :
-         <span className="song-number">{index+1}</span>
-        }
-
+       // {  this.state.isHovered === index + 1 ? (<span className="icon ion-md-play" />) :
+       //   (<span className="song-number">{index + 1}</span>)
+       //  (<span className={this.state.isPlaying ? "icon ion-md-pause" : "icon ion-md-play"} />)}
       </button>
        </td>
        <td>{song.title},</td>
