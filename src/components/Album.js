@@ -88,19 +88,19 @@ componentWillUnmount() {
 
   getIconClassName(song, index) {
     if ((this.state.isPlaying && this.state.currentSong.title === song.title)) {
-      return  "ion-md-pause"
+      return  "ion-pause"
     }
 
-    return "ion-md-play"
+    return "ion-play"
   }
 
   getPlayButton(song, index) {
     if (this.state.isHovered === index+1) {
-      return <span className={`icon ${this.getIconClassName(song, index)}`}></span>
+      return <span className={`${this.getIconClassName(song, index)}`}></span>
     }
 
     if (this.state.currentSong.title === song.title) {
-      return <span className={`icon ${this.getIconClassName(song, index)}`}></span>
+      return <span className={`${this.getIconClassName(song, index)}`}></span>
     }
 
     return  <span className="song-number">{index+1}</span>;
