@@ -17,10 +17,13 @@ class Album extends Component {
       duration: album.songs[0].duration,
       isPlaying: false,
       isHovered: false,
+      volume: .5,
     };
 
     this.audioElement = document.createElement('audio');
     this.audioElement.src = album.songs[0].audioSrc;
+    //Include volume in the state here
+    this.audioElement.volume = this.state.volume;
   }
 
   componentDidMount() {
@@ -92,6 +95,12 @@ componentWillUnmount() {
       this.setState({ currentTime: newTime });
     }
 
+    handleVolumeChange(e) {
+      const newVolume = e.target.value;
+      this.audioElement.volume = (newVolume);
+      this.setState({ volume: newVolume });
+    }
+
   getIconClassName(song, index) {
     if ((this.state.isPlaying && this.state.currentSong.title === song.title)) {
       return  "ion-pause"
@@ -160,6 +169,7 @@ componentWillUnmount() {
            handlePrevClick={() => this.handlePrevClick()}
            handleNextClick={() => this.handleNextClick()}
            handleTimeChange={(e) => this.handleTimeChange(e)}
+           handleVolumeChange={(e) => this.handleVolumeChange(e)}
          />
         </section>
     );
