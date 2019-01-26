@@ -101,6 +101,20 @@ componentWillUnmount() {
       this.setState({ volume: newVolume });
     }
 
+    formatTime(time) {
+      if (isNaN(time)) {
+        return "-:--"
+      }
+      const timeInSeconds = Math.floor(time);
+      const minutesInSong = Math.floor(timeInSeconds / 60);
+      const leftoverSeconds = Math.floor(timeInSeconds % 60);
+      if(leftoverSeconds >= 10) {
+        return minutesInSong + ":" + leftoverSeconds;
+      } else if (leftoverSeconds < 10) {
+        return minutesInSong+ ":0" + leftoverSeconds;
+      }
+    }
+
   getIconClassName(song, index) {
     if ((this.state.isPlaying && this.state.currentSong.title === song.title)) {
       return  "ion-pause"
@@ -136,7 +150,7 @@ componentWillUnmount() {
       </button>
        </td>
        <td>{song.title},</td>
-       <td>{song.duration} seconds</td>
+       <td>{this.formatTime(song.duration)}</td>
       </tr>
     );
     return (
@@ -163,13 +177,15 @@ componentWillUnmount() {
         <PlayerBar
            isPlaying={this.state.isPlaying}
            currentSong={this.state.currentSong}
-           currentTime={this.audioElement.currentTime}
-           duration={this.audioElement.duration}
+           currentTime={this.formatTime(this.audioElement.currentTime)}
+           duration={this.formatTime(this.audioElement.duration)}
            handleSongClick={() => this.handleSongClick(this.state.currentSong)}
            handlePrevClick={() => this.handlePrevClick()}
            handleNextClick={() => this.handleNextClick()}
            handleTimeChange={(e) => this.handleTimeChange(e)}
            handleVolumeChange={(e) => this.handleVolumeChange(e)}
+           formatTime={(e) => this.formatTime(e)}
+
          />
         </section>
     );
