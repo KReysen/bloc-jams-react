@@ -102,12 +102,12 @@ componentWillUnmount() {
     }
 
     formatTime(time) {
-      if (isNaN(time)) {
-        return "-:--"
-      }
+       if (isNaN(time)) {
+         return "-:--"
+       }
       const timeInSeconds = Math.floor(time);
       const minutesInSong = Math.floor(timeInSeconds / 60);
-      const leftoverSeconds = Math.floor(timeInSeconds % 60);
+      const leftoverSeconds = (timeInSeconds % 60);
       if(leftoverSeconds >= 10) {
         return minutesInSong + ":" + leftoverSeconds;
       } else if (leftoverSeconds < 10) {
@@ -177,14 +177,14 @@ componentWillUnmount() {
         <PlayerBar
            isPlaying={this.state.isPlaying}
            currentSong={this.state.currentSong}
-           currentTime={this.formatTime(this.audioElement.currentTime)}
-           duration={this.formatTime(this.audioElement.duration)}
+           currentTime={this.audioElement.currentTime}
+           duration={this.audioElement.duration}
            handleSongClick={() => this.handleSongClick(this.state.currentSong)}
            handlePrevClick={() => this.handlePrevClick()}
            handleNextClick={() => this.handleNextClick()}
            handleTimeChange={(e) => this.handleTimeChange(e)}
            handleVolumeChange={(e) => this.handleVolumeChange(e)}
-           formatTime={(e) => this.formatTime(e)}
+           formatTime={(time) => this.formatTime(time)}
 
          />
         </section>
