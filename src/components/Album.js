@@ -86,6 +86,12 @@ componentWillUnmount() {
       this.play();
     }
 
+    handleTimeChange(e) {
+      const newTime = this.audioElement.duration * e.target.value;
+      this.audioElement.currentTime = newTime;
+      this.setState({ currentTime: newTime });
+    }
+
   getIconClassName(song, index) {
     if ((this.state.isPlaying && this.state.currentSong.title === song.title)) {
       return  "ion-pause"
@@ -153,6 +159,7 @@ componentWillUnmount() {
            handleSongClick={() => this.handleSongClick(this.state.currentSong)}
            handlePrevClick={() => this.handlePrevClick()}
            handleNextClick={() => this.handleNextClick()}
+           handleTimeChange={(e) => this.handleTimeChange(e)}
          />
         </section>
     );
