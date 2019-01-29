@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+
+}
+.background {
+  background-color: blue;
+
 }
 
 .App-logo {
@@ -29,4 +34,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Navbar {
+  background-color: #3E4B46;
 }
