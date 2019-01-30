@@ -3,4 +3,9 @@
   color: white;
   padding-top: 15px;
   padding-bottom: 15px;
+  opacity: .5;
+}
+
+#landingpage {
+  font-family: 'Playfair Display', serif;
 }

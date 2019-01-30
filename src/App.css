@@ -1,11 +1,16 @@
 .App {
   text-align: center;
-
+  background-image: url("https://i.imgur.com/rOghE8r.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.background {
+/* .background {
   background-color: blue;
 
-}
+} */
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -38,4 +43,9 @@
 
 .Navbar {
   background-color: #3E4B46;
+  font-family: 'Roboto', sans-serif;
+}
+
+#jumbo {
+  font-family: 'Playfair Display', serif;
 }

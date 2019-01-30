@@ -1,10 +1,12 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import '../styles/Landing.css'
+import '../styles/Landing.css';
+
+
 const Landing = () => (
 
   <div id="landingpage">
-  <img src="components/icymtn.JPG" alt="mountain" />
+
   <section className ="landing">
     <h1 className="hero-title">Turn the music up!</h1>
 
