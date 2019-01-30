@@ -4,6 +4,7 @@ import '../styles/Landing.css'
 const Landing = () => (
 
   <div id="landingpage">
+  <img src="components/icymtn.JPG" alt="mountain" />
   <section className ="landing">
     <h1 className="hero-title">Turn the music up!</h1>
 
