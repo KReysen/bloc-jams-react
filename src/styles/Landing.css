@@ -1,9 +1,16 @@
-.row {
-  background-color: #3E4B46;
+.selling-points {
+  background-color: rgb(62,75,70, 0.8);
   color: white;
   padding-top: 15px;
   padding-bottom: 15px;
-  opacity: .5;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.selling-points h2 {
+  font-size: 1.5em;
+  color: #A5BBBA;
 }
 
 #landingpage {

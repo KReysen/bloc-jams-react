@@ -9,7 +9,7 @@ const Landing = () => (
 
   <section className ="landing">
     <h1 className="hero-title">Turn the music up!</h1>
-
+<div className="container" id="infocolumns">
   <Row className="selling-points">
     <Col md={4} className="point">
       <h2 className="point-title">Choose your music</h2>
@@ -25,6 +25,7 @@ const Landing = () => (
 
     </Col>
   </Row>
+  </div>
   </section>
   </div>
 );
