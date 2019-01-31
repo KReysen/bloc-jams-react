@@ -150,7 +150,7 @@ componentWillUnmount() {
 
       </button>
        </td>
-       <td>{song.title},</td>
+       <td>{song.title}</td>
        <td>{this.formatTime(song.duration)}</td>
       </tr>
     );
@@ -167,8 +167,8 @@ componentWillUnmount() {
           </div>
         </section>
 
-      
-        <table className="table" id="song-list" >
+
+        <table className="table table-hover table-dark" id="song-list" >
           <colgroup>
             <col id="song-number-column" />
             <col id="song-title-column" />

@@ -5,15 +5,15 @@ background-color: rgb(62,75,70, 0.8);
 .eachAlbum {
   background-color: rgb(62,75,70, 0.8);
   color: white;
-  max-width: 25%;
-  display: inline-flex;
   padding: 1rem;
-  margin: 1.5rem;
+  margin: 1rem;
+
 }
 
 .eachAlbum a {
   font-family: 'Playfair Display', serif;
   color: white;
+
 }
 
 .eachAlbum a:hover {

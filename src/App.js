@@ -11,7 +11,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App parallax">
         <header>
           <Navbar className="Navbar">
             <Link to='/'>Landing</Link>
@@ -23,7 +23,7 @@ class App extends Component {
           </Jumbotron>
         </header>
         <div id="background">
-        <main>
+        <main className="container">
            <Route exact path="/" component={Landing} />
            <Route path="/library" component={Library} />
            <Route path="/album/:slug" component={Album} />
