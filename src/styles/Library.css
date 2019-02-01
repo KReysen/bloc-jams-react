@@ -19,3 +19,10 @@ background-color: rgb(62,75,70, 0.8);
 .eachAlbum a:hover {
   color: #A5BBBA;
 }
+
+#player-bar-controls {
+  background-color: rgb(165,187,186, 0.8);
+  text-align: center;
+  max-width: 50%;
+  padding-bottom: 1em;
+}

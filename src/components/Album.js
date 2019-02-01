@@ -159,7 +159,7 @@ componentWillUnmount() {
       <section className="album">
 
         <section id="album-info">
-          <img  id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title} />
+          <img className="img img-thumbnail img-fluid mx-auto d-block" id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title} />
           <div className="album-details">
             <h1 id="album-title">{this.state.album.title}</h1>
             <h2 className="artist">{this.state.album.artist}</h2>
@@ -168,7 +168,7 @@ componentWillUnmount() {
         </section>
 
 
-        <table className="table table-hover table-dark" id="song-list" >
+        <table className="table table-hover table-dark table-sm" id="song-list" >
           <colgroup>
             <col id="song-number-column" />
             <col id="song-title-column" />

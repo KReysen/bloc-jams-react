@@ -38,17 +38,28 @@
 
 .Navbar {
   background-color: rgb(62,75,70, 0.8);
-  font-family: 'Roboto', sans-serif;
+
 }
 
 .Navbar a {
+  color: white;
+
+}
+
+.Navbar a:hover {
   color: #A5BBBA;
+}
+
+#rightLinks {
+  display: inherit;
 }
 
 .Navbar-brand {
   font-size: 1.5em;
   font-weight: bold;
   font-family: 'Playfair Display', serif;
+  color: #A5BBBA;
+  margin-top: .5em;
 }
 
 #jumbo {

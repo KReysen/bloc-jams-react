@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import '../styles/Library.css';
 
 class PlayerBar extends Component {
   render() {
     return (
+      <div className="container" id="player-bar-controls">
       <section className="player-bar">
       <section id="buttons">
         <button id="previous" onClick={this.props.handlePrevClick}>
@@ -41,6 +43,7 @@ class PlayerBar extends Component {
         <div className="icon ion-volume-high"></div>
       </section>
       </section>
+      </div>
     );
   }
 }

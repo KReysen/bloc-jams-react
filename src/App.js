@@ -13,11 +13,12 @@ class App extends Component {
     return (
       <div className="App parallax">
         <header>
-          <Navbar className="Navbar navbar-dark sticky-top">
+          <Navbar className="Navbar navbar-dark fixed-top navbar-expand-lg">
             <Link to='/' className='Navbar-brand'>Bloc Jams</Link>
+            <div className='Navbar-nav ml-auto' id='rightLinks'>
             <Link to='/' className='nav-link'>Landing</Link>
-
-            <Link to='/library' className='nav nav-link navbar-right'>Library</Link>
+            <Link to='/library' className='nav-link'>Library</Link>
+            </div>
           </Navbar>
           <Jumbotron id="jumbo">
           <h1 id="nameTitle">Bloc Jams</h1>
