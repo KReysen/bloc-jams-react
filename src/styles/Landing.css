@@ -16,3 +16,8 @@
 #landingpage {
   font-family: 'Playfair Display', serif;
 }
+
+.hero-title {
+  text-align:center;
+  padding-bottom: 1em;
+}

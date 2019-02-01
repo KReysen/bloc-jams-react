@@ -41,6 +41,16 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.Navbar a {
+  color: #A5BBBA;
+}
+
+.Navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+}
+
 #jumbo {
   font-family: 'Playfair Display', serif;
   background-color: transparent;
@@ -49,4 +59,5 @@
 #nameTitle {
   font-size: 3.2em;
   font-weight:bold;
+  text-align: center;
 }
