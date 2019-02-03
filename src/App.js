@@ -16,7 +16,7 @@ class App extends Component {
           <Navbar className="Navbar navbar-dark fixed-top navbar-expand-lg">
             <Link to='/' className='Navbar-brand'>Bloc Jams</Link>
             <div className='Navbar-nav ml-auto' id='rightLinks'>
-            <Link to='/' className='nav-link'>Landing</Link>
+            <Link to='/' className='nav-link'>Home</Link>
             <Link to='/library' className='nav-link'>Library</Link>
             </div>
           </Navbar>
